@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>国关网球场管理系统</title>
+
+<link href="mycss.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 50px;
+	font-weight: bold;
+	font-family: "新宋体";
+}
+-->
+</style>
+</head>
+<body background="loginbg.jpg">
+<center>
+<div>
+
+<div>
+<center>
+<p>&nbsp;</p>
+  <p>&nbsp;</p>
+<br><br><br><br>
+<form action="UserLogin" method="post">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <br>
+  <table>
+
+<td>用户名：</td>
+<td><input type="text" name="user"></td>
+</tr>
+<tr height="10">
+<td></td>
+</tr>
+<tr>
+<td>密码: </td>
+<td><input type="password" name="passwd"></td>
+</tr>
+<tr height="30">
+<td></td>
+</tr>
+</table>
+<table>
+<tr>
+<td width=20px></td>
+<th>普通用户登录:<input type="radio" name="usertype" value="students" checked></th>
+<th>管理员登录:<input type="radio" name="usertype" value="manager"></th>
+<th>超级管理员登录:<input type="radio" name="usertype" value="supermanager"></th>
+</tr>
+<tr height="15">
+<td></td>
+</tr>
+</table>
+<table>
+<tr>
+<td width=20px></td>
+<td><input type="submit" value="登录"></td>
+<td width=50px></td>
+<td><input type="reset" value="重新输入"></td>
+</tr>
+</table>
+<div id="again" style="display:none"><font color="red">用户名或密码错误，请重新输入</font></div>
+</form>
+
+</div>
+</div>
+</center>
+
+<script type="text/javascript">
+var url=document.URL;
+var param=url.split('?');
+var attr=param[1];
+
+if(attr!=null){
+	var value=attr.split('=');
+
+	
+	if("again"==value[1]){
+		
+		
+		    document.getElementById("again").style.display="";
+	}
+	
+	else{
+		
+		alert("网址输入错误,请重新访问");
+	}
+}
+else{
+	
+    document.getElementById("again").style.display="none";
+}
+
+</script>
+</body>
+</html> 
